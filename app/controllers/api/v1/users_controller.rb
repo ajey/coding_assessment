@@ -8,6 +8,17 @@ class Api::V1::UsersController < ApplicationController
       render json: user.errors, status: :bad_request
     end
   end
+
+  def login
+    user = User.find_by(email: params[:email].to_s.downcase)
+  
+    if user && user.authenticate(params[:password])
+        auth_token = JsonWebToken.encode({user_id: user.id})
+        render json: {auth_token: auth_token}, status: :ok
+    else
+      render json: {error: 'Invalid username / password'}, status: :unauthorized
+    end
+  end
   
   private
   
