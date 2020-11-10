@@ -8,6 +8,8 @@ Rails.application.routes.draw do
           post 'login'
         end
       end
+
+      resources :appointments, only: :create
     end
   end
 end

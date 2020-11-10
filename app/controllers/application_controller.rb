@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::API
   require 'jsonwebtoken'
 
+  def require_login
+    authenticate_request!# || invalid_authentication
+  end
+
   protected
   def authenticate_request!
     if !payload || !JsonWebToken.valid_payload(payload.first)
