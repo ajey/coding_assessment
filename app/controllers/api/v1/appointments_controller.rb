@@ -1,5 +1,4 @@
 class Api::V1::AppointmentsController < ApplicationController
-
   before_action :require_login
 
   def create
