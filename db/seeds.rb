@@ -17,5 +17,6 @@ time_slots = TimeSlot.create([
   {start_time: '09:00', end_time: '10:00', slot_date: '2020-11-11'},
   {start_time: '10:00', end_time: '11:00', slot_date: '2020-11-11'},
   {start_time: '11:00', end_time: '12:00', slot_date: '2020-11-11'},
-  {start_time: '11:00', end_time: '12:00', slot_date: '2020-11-12'}
+  {start_time: '11:00', end_time: '12:00', slot_date: '2020-11-12'},
+  {start_time: '11:00', end_time: '12:00', slot_date: '2020-11-25'}
 ])

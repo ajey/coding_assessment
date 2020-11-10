@@ -10,6 +10,13 @@ Rails.application.routes.draw do
       end
 
       resources :appointments, only: :create
+
+      resources :doctors do
+        collection do
+          get 'appointments'
+          get 'weekly_appointments'
+        end
+      end
     end
   end
 end
