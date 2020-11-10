@@ -10,7 +10,7 @@ class Api::V1::DoctorsController < ApplicationController
 
   def appointments
     doctor = Doctor.find params[:doctor_id]
-    appointments = doctor.appointments.joins(:time_slot).where("time_slots.slot_date == ?", Date.today)
+    appointments = doctor.appointments.joins(:time_slot).where('time_slots.slot_date': Date.today)
 
     render json: appointments
   end
