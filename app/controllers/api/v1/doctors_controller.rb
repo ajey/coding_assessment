@@ -1,12 +1,12 @@
 class Api::V1::DoctorsController < ApplicationController
   before_action :require_login
 
-  def available_slots
-    doctor = Doctor.find params[:doctor_id]
-    slots = doctor.appointments.join(:time_slots)
+  # def available_slots
+  #   doctor = Doctor.find params[:doctor_id]
+  #   slots = doctor.appointments.join(:time_slots)
 
-    render json: slots
-  end
+  #   render json: slots
+  # end
 
   def appointments
     doctor = Doctor.find params[:doctor_id]

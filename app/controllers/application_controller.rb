@@ -2,7 +2,7 @@ class ApplicationController < ActionController::API
   require 'jsonwebtoken'
 
   def require_login
-    authenticate_request!# || invalid_authentication
+    authenticate_request!
   end
 
   protected

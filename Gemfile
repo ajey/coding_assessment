@@ -44,6 +44,7 @@ end
 group :test do
   # Use RSpec for specs
   gem 'rspec-rails'
+  gem 'database_cleaner-active_record'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
