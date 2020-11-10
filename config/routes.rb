@@ -9,7 +9,12 @@ Rails.application.routes.draw do
         end
       end
 
-      resources :appointments, only: :create
+      resources :appointments do
+        collection do
+          get 'weekly'
+          get 'available'
+        end
+      end
 
       resources :doctors do
         collection do
